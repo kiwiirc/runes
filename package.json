@@ -2,8 +2,9 @@
   "name": "runes",
   "version": "0.4.3",
   "description": "Unicode-aware JS string splitting",
-  "main": "index.js",
+  "main": "dist",
   "scripts": {
+    "prepare": "babel -d dist/ --delete-dir-on-start --verbose index.js",
     "test": "eslint . && ava test"
   },
   "repository": {
@@ -30,6 +31,9 @@
     "index.js"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "ava": "^0.22.0",
     "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
